@@ -1,8 +1,8 @@
 def func_counter(func):
     counter = 0
 
-    def inner(x):
-        func(x)
+    def inner(*x):
+        func(*x)
         inner.counter += 1
 
     inner.counter = 0
